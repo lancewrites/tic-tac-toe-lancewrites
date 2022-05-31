@@ -1,16 +1,18 @@
 # ❌ ⭕️ Tic Tac Toe
 
 This is a web game for two players on one device, taking turns. You will have to use component state to keep track of whose turn it is and which squares have been marked by each player.
-
 This project will challenge your knowledge of React but should also be an exercise in creating good user experiences. Your view should be styled to look good as well as function flawlessly.
+
+<!-- use component state for each user and for what user marked what square  -->
 
 ### 📚 User Stories
 - As a user, I can see a 3x3 grid game board on the page.
-    - Branch: game-board
+    <!-- - Branch: game-board
     - Mapped over the square component using the square array to get 9 squares
     - styled the group of squares with flexbox
     - Passed the value of the array in state to Square Component
-    
+     -->
+
 - As a user, I can click on a square to mark it.
     - Branch: square-click
     - First user click shows an `X`
