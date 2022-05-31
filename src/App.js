@@ -14,7 +14,19 @@ class App extends Component {
     return(
       <>
         <h1>Tic Tac Toe</h1>
-        <Square />
+        <div className="game-board">
+          {/* Iterate through the squares array and return the sqaure component for each value in that array */}
+          {this.state.squares.map((value, index) => {
+            return (
+              <Square
+              value={value}
+              key={index}
+              index={index}
+              />
+            )
+          })}
+        </div>
+        
       </>
     )
   }
