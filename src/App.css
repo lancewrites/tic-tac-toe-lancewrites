@@ -2,12 +2,13 @@
   height: 100px;
   width: 100px;
   border: 2px solid black;
+  font-size: 90px;
 }
 
 .game-board {
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 312px;
   margin: 0 auto;
 }
 

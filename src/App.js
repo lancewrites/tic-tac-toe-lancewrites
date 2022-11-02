@@ -8,31 +8,15 @@ class App extends Component {
     this.state = {
       squares: [null, null, null, null, null, null, null, null, null],
       clicks: 0,
-      //markerArray: ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"],
-      //xTurn: "",
-      // oTurn: false,
+
       
     }
   }
-  // handleTurn = () => {
-  //   const { clicks, xTurn } = this.state
-  //   let turnX = clicks %2
-  //   if(turnX === 1 ){
-  //     xTurn = "no"
-  //     this.setState({xTurn: turnX})
 
-  //   } else if(turnX === 0){
-  //     xTurn = "yes"
-  //     this.setState({xTurn: turnX })
-  //   }
-   
-  // }
+  restartPage = () => {
+    return window.location.reload();
 
-  // handleClickCount = ()  => {
-  //   let clickCount = 0
-  //   clickCount = this.state.clicks + 1
-  //   this.setState({clicks: clickCount})
-  // }
+  }
 
   handleGamePlay = (index) => {
     const { squares, clicks } = this.state
@@ -49,7 +33,7 @@ class App extends Component {
     ];
     //If clicks is odd then put an "X" in the square
       if(clicks%2 === 0 && squares[index]=== null){
-      squares[index] = "X"
+      squares[index] = '\u274c'
       //It also updates this.state.clicks value 
       clickCount = this.state.clicks + 1
       this.setState({squares: squares})
@@ -57,7 +41,7 @@ class App extends Component {
       } 
     //If clicks is even then put an "O" in the square 
       else if(clicks%2 === 1 && squares[index] === null){
-        squares[index] = "O"
+        squares[index] = '\u2b55'
         
          //It also updates this.state.clicks value 
         clickCount = this.state.clicks + 1
@@ -85,7 +69,10 @@ class App extends Component {
 
     return(
       <>
-        <h1>Tic Tac Toe</h1>
+        <h1>Tic-Tac-Toe</h1>
+        <div>
+          <button id="restart-button" onClick={this.restartPage}>Restart</button>
+        </div>
         
           <div className="game-board" onClick={this.handleGamePlay}>
             {/* Iterate through the squares array and return the sqaure component for each value in that array */}
